@@ -9,54 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 
 
-/ {
-  behaviors {
-    macro_press: macro_press {
-      compatible = "zmk,behavior-macro";
-      label = "MACRO_PRESS";
-      #binding-cells = <0>;
-    };
-  };
-
-  macros {
-    ctrl_y: ctrl_y {
-      compatible = "zmk,behavior-macro";
-      label = "CTRL_Y";
-      #binding-cells = <0>;
-      bindings = <&kp LC>, <&kp Y>;
-    };
-
-    ctrl_v: ctrl_v {
-      compatible = "zmk,behavior-macro";
-      label = "CTRL_V";
-      #binding-cells = <0>;
-      bindings = <&kp LC>, <&kp V>;
-    };
-
-    ctrl_c: ctrl_c {
-      compatible = "zmk,behavior-macro";
-      label = "CTRL_C";
-      #binding-cells = <0>;
-      bindings = <&kp LC>, <&kp C>;
-    };
-
-    ctrl_x: ctrl_x {
-      compatible = "zmk,behavior-macro";
-      label = "CTRL_X";
-      #binding-cells = <0>;
-      bindings = <&kp LC>, <&kp X>;
-    };
-
-    ctrl_z: ctrl_z {
-      compatible = "zmk,behavior-macro";
-      label = "CTRL_Z";
-      #binding-cells = <0>;
-      bindings = <&kp LC>, <&kp Z>;
-    };
-  };
-};
-
-
 
 / {
         keymap {
@@ -82,7 +34,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &trans       &trans       &trans       &trans       &trans         &ctrl_y   &ctrl_v   &ctrl_c &ctrl_x &ctrl_z  &trans
+   &kp TAB    &trans       &trans       &trans       &trans       &trans         &kp LC(Y)  &kp LC(V)   &kp LC(C) &kp LC(X) &kp LC(Z)  &trans
    &trans &kp LGUI   &kp LCTRL    &kp LALT     &kp LSHIFT     &trans         &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
