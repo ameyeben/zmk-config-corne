@@ -49,7 +49,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans  &kp LEFT_BRACKET &kp N7 &kp N8 &kp N9 &kp RIGHT_BRACKET   &trans &trans  &trans &trans &trans &trans
-   &trans  &kp SEMICOLON   &kp N4 &kp N5   &kp N6   &kp EQUAL      &trans &kp SHFT &kp CTRL  &kp ALT &kp GUI &trans
+   &trans  &kp SEMICOLON   &kp N4 &kp N5   &kp N6   &kp EQUAL      &trans &kp SHFT &kp CTRL  &kp ALT &kp K_CMENU &trans
    &trans  &kp GRAVE   &kp N1 &kp N2   &kp N3   &kp BACKSLASH      &trans &trans   &trans   &trans   &trans  &trans
                              &trans &kp N0   &kp SPACE   &kp RET   &trans    &trans
                         >;
