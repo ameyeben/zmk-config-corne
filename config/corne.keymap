@@ -72,7 +72,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &trans       &trans       &trans       &trans       &trans         &kp ctrl_y   &kp ctrl_v   &kp ctrl_c &kp ctrl_x &kp ctrl_z  &trans
+   &kp TAB    &trans       &trans       &trans       &trans       &trans         &ctrl_y   &ctrl_v   &ctrl_c &ctrl_x &ctrl_z  &trans
    &trans &kp LGUI   &kp LCTRL    &kp LALT     &kp LSHIFT     &trans         &trans   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
    &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
                                     &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
