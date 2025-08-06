@@ -10,40 +10,48 @@
 
 
 / {
+  behaviors {
+    macro_press: macro_press {
+      compatible = "zmk,behavior-macro";
+      label = "MACRO_PRESS";
+      #binding-cells = <0>;
+    };
+  };
+
   macros {
     ctrl_y: ctrl_y {
       compatible = "zmk,behavior-macro";
       label = "CTRL_Y";
       #binding-cells = <0>;
-      bindings = <&macro_press &kp LC &kp Y>;
+      bindings = <&kp LC>, <&kp Y>;
     };
 
     ctrl_v: ctrl_v {
       compatible = "zmk,behavior-macro";
       label = "CTRL_V";
       #binding-cells = <0>;
-      bindings = <&macro_press &kp LC &kp V>;
+      bindings = <&kp LC>, <&kp V>;
     };
 
     ctrl_c: ctrl_c {
       compatible = "zmk,behavior-macro";
       label = "CTRL_C";
       #binding-cells = <0>;
-      bindings = <&macro_press &kp LC &kp C>;
+      bindings = <&kp LC>, <&kp C>;
     };
 
     ctrl_x: ctrl_x {
       compatible = "zmk,behavior-macro";
       label = "CTRL_X";
       #binding-cells = <0>;
-      bindings = <&macro_press &kp LC &kp X>;
+      bindings = <&kp LC>, <&kp X>;
     };
 
     ctrl_z: ctrl_z {
       compatible = "zmk,behavior-macro";
       label = "CTRL_Z";
       #binding-cells = <0>;
-      bindings = <&macro_press &kp LC &kp Z>;
+      bindings = <&kp LC>, <&kp Z>;
     };
   };
 };
