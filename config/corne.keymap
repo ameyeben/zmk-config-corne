@@ -47,7 +47,7 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans  &kp LBKT &kp AMPS &kp ASTRK &kp LPAR &kp RBKT   &trans &trans  &trans &trans &trans &trans
-   &trans &kp SEMI   &kp DLLR &kp PRCNT   &kp CARET   &kp PLUS      &trans &kp SHFT &kp CTRL  &kp ALT &kp GUI &trans
+   &trans &kp SEMI   &kp DLLR &kp PRCNT   &kp CARET   &kp PLUS      &trans &kp SHFT &kp CTRL  &kp ALT &kp K_CMENU &trans
    &trans &kp TILDE   &kp EXCL &kp AT   &kp POUND   &kp PIPE      &trans &trans  &trans  &trans &trans &trans
                              &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
                         >;
