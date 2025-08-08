@@ -8,8 +8,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&mt { flavor = "tap-preferred"; };
-
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -22,15 +20,28 @@
 };
 
 / {
+    behaviors {
+        custom_behavior: custom_behavior {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CUSTOM_BEHAVIOR";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-trigger-key-positions = <13 14 15 16 19 20 21 22>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q               &kp W           &kp E            &kp R             &kp T        &kp Y        &kp U              &kp I             &kp O            &kp P                   &kp BACKSPACE
-&kp LCTRL  &mt LEFT_CONTROL A  &mt LEFT_ALT S  &mt LEFT_META D  &mt LEFT_SHIFT F  &kp G        &kp H        &mt RIGHT_SHIFT J  &mt RIGHT_META K  &mt RIGHT_ALT L  &mt RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
-&kp LSHFT  &kp Z               &kp X           &kp C            &kp V             &kp B        &kp N        &kp M              &kp COMMA         &kp DOT          &kp FSLH                &kp ESC
-                                               &lt 3 ESCAPE     &lt 1 TAB         &kp SPACE    &lt 4 ENTER  &lt 2 BACKSPACE    &lt 5 DEL
+&kp TAB    &kp Q                            &kp W                        &kp E                         &kp R                          &kp T        &kp Y        &kp U                           &kp I                          &kp O                         &kp P                                &kp BACKSPACE
+&kp LCTRL  &custom_behavior LEFT_CONTROL A  &custom_behavior LEFT_ALT S  &custom_behavior LEFT_META D  &custom_behavior LEFT_SHIFT F  &kp G        &kp H        &custom_behavior RIGHT_SHIFT J  &custom_behavior RIGHT_META K  &custom_behavior RIGHT_ALT L  &custom_behavior RIGHT_CONTROL SEMI  &kp SINGLE_QUOTE
+&kp LSHFT  &kp Z                            &kp X                        &kp C                         &kp V                          &kp B        &kp N        &kp M                           &kp COMMA                      &kp DOT                       &kp FSLH                             &kp ESC
+                                                                         &lt 3 ESCAPE                  &lt 1 TAB                      &kp SPACE    &lt 4 ENTER  &lt 2 BACKSPACE                 &lt 5 DEL
             >;
 
             label = "DFLT";
